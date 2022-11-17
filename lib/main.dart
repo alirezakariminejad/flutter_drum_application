@@ -19,18 +19,51 @@ Widget getApplication() {
       backgroundColor: Colors.deepPurpleAccent,
       body: SafeArea(
         child: DecoratedBox(
-            position: DecorationPosition.background,
-            decoration: BoxDecoration(
-              color: Colors.deepPurpleAccent,
-              image: DecorationImage(
-                image: AssetImage('images/drum.png'),
-                fit: BoxFit.fitWidth,
-              ),
+          position: DecorationPosition.background,
+          decoration: BoxDecoration(
+            color: Colors.deepPurpleAccent,
+            image: DecorationImage(
+              image: AssetImage('images/drum.png'),
+              fit: BoxFit.fitWidth,
             ),
-            child: Center(
-              child: Text('alireza'),
-            )),
+          ),
+          child: getBoxDrumEffect(),
+        ),
       ),
     ),
+  );
+}
+
+Widget getBoxDrumEffect() {
+  return Column(
+    children: [
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+          ],
+        ),
+      ),
+    ],
   );
 }
