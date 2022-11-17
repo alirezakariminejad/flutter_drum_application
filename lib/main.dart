@@ -16,9 +16,20 @@ class Application extends StatelessWidget {
 Widget getApplication() {
   return MaterialApp(
     home: Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.deepPurpleAccent,
       body: SafeArea(
-        child: Text('alireza KDL'),
+        child: DecoratedBox(
+            position: DecorationPosition.background,
+            decoration: BoxDecoration(
+              color: Colors.deepPurpleAccent,
+              image: DecorationImage(
+                image: AssetImage('images/drum.png'),
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            child: Center(
+              child: Text('alireza'),
+            )),
       ),
     ),
   );
