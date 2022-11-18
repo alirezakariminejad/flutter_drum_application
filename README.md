@@ -3,7 +3,6 @@
 A new Flutter project.
 dev_dependencies:
 - [AudioPlayers](https://pub.dev/documentation/audioplayers/0.20.1/)
-h
 
 ## Getting Started
 
