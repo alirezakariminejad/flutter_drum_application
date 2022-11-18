@@ -1,7 +1,8 @@
 # flutter_drum_application
 
 A new Flutter project.
-dev_dependencies:
+
+dependencies:
 - [AudioPlayers](https://pub.dev/documentation/audioplayers/0.20.1/)
 
 ## Getting Started
