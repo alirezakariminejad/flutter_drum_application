@@ -45,39 +45,14 @@ Widget getBoxDrumEffect() {
             Expanded(
               child: TextButton(
                   onPressed: () {
-                    var player = AudioCache();
-                    player.play('h1.wav');
+                    playSound('h1.wav');
                   },
                   child: Text('')),
             ),
             Expanded(
               child: TextButton(
                   onPressed: () {
-                    var player = AudioCache();
-                    player.play('h2.wav');
-                  },
-                  child: Text('')),
-            ),
-          ],
-        ),
-      ),
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: TextButton(
-                  onPressed: () {
-                    var player = AudioCache();
-                    player.play('c1.wav');
-                  },
-                  child: Text('')),
-            ),
-            Expanded(
-              child: TextButton(
-                  onPressed: () {
-                    var player = AudioCache();
-                    player.play('c2.wav');
+                    playSound('h2.wav');
                   },
                   child: Text('')),
             ),
@@ -91,16 +66,35 @@ Widget getBoxDrumEffect() {
             Expanded(
               child: TextButton(
                   onPressed: () {
-                    var player = AudioCache();
-                    player.play('k1.wav');
+                    playSound('c1.wav');
                   },
                   child: Text('')),
             ),
             Expanded(
               child: TextButton(
                   onPressed: () {
-                    var player = AudioCache();
-                    player.play('k2.wav');
+                    playSound('c2.wav');
+                  },
+                  child: Text('')),
+            ),
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playSound('k1.wav');
+                  },
+                  child: Text('')),
+            ),
+            Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playSound('k2.wav');
                   },
                   child: Text('')),
             ),
@@ -111,4 +105,7 @@ Widget getBoxDrumEffect() {
   );
 }
 
-
+playSound(String soundName) {
+  var player = AudioCache();
+  player.play(soundName);
+}
